@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    float: left;
+    width: 70%; /* Adjust as needed */
+}
+
+.sidebar {
+    float: right;
+   
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.details, .prizes, .quotes {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quote-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.quote {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.quote.active {
+    opacity: 1;
+}
+
+footer {
+      text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+    width: 100%;
+    clear: both; 
+}
+
+#cookieConsent {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#cookieConsent button {
+    margin: 5px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.name-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Adjust spacing between names */
+}
+
+.name-item {
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Clear floats */
+body::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a {
+    color: white;
+}
+@media (max-width: 750px){
+    header{
+ width: 100%;
+    }   
+   main{
+width:100%;
+   }         
+}
+@media (min-width: 751px){
+      .sidebar{
+            width: 24%;                                                   
+      }                                                           
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 99999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.3s ease, visibility 1.3s ease;
+}
+
+#preloader.hide-preloader {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#loader {
+  border: 6px solid #000000;
+  border-top: 6px solid var(--accent-color);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1.5s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -60px 0 0 -60px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.quote-container {
+    position: relative;
+    overflow: hidden;
+    height: 150px; /* Adjust according to your needs */
+}
+
+.quote {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Centers items vertically */
+}
+
+.quote.active {
+    opacity: 1;
+}
+
+.quote-image {
+    width: 50px; /* Set a width for the images */
+    height: 50px; /* Set a height for the images */
+    border-radius: 50%; /* Optional: makes images circular */
+    margin-right: 15px; /* Space between image and text */
+}
+
+
